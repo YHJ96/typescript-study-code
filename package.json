@@ -1,0 +1,23 @@
+{
+  "name": "typescript-study-code",
+  "version": "1.0.0",
+  "description": "\"# typescript-study-code\"",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YHJ96/typescript-study-code.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YHJ96/typescript-study-code/issues"
+  },
+  "homepage": "https://github.com/YHJ96/typescript-study-code#readme",
+  "dependencies": {
+    "typescript": "^4.8.4"
+  }
+}
