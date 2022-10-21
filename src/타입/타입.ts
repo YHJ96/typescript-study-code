@@ -40,6 +40,7 @@ let d3: 'str' = 'str';
 /*
   4. 참조 타입 (객체)
   - 객체의 프로퍼티에 타입을 지정해주지 않아도 자동으로 타입을 추론한다.
+  - 객체는 프로퍼티를 추가하거나 필요한 프로퍼티를 제공하지 않으면 오류를 발생시킨다.
 */
 
 let a4 = {
@@ -57,3 +58,29 @@ const b4: {
   name: 'YHJ',
   age: 25,
 };
+
+/* 
+  객체 프로퍼티 방법 3가지
+  1. 프로퍼티 타입 지정
+  2. 옵셔널
+  3. 인덱스 시그니처
+  4. readonly
+*/
+
+const c4: {
+  // (1)
+  name: string;
+  // (2) 프로퍼티를 포함할 수 있다.
+  age?: number;
+  // (3) [key: T]: U T타입의 키를 가지면서 U타입의 값을 갖는 프로퍼티를 가질 수 있다.
+  [key: number]: boolean;
+  // (4) 프로퍼티의 값을 읽기 전용으로 수정한다.
+  readonly address: string;
+} = {
+  name: 'YHJ',
+  1: true,
+  address: 'seoul',
+};
+
+// readonly으로 인해 오류가 발생한다.
+// c4.address = 'busan';
